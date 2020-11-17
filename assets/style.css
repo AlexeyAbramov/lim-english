@@ -350,7 +350,7 @@ body {
 }
 .unsub-form .unsub-form__content {
   position: fixed;
-  width:calc(100vw - 30px);
+  width: 844px;
   min-height: 409px;
   padding: 0 90px;
   top: calc(50% - 204px);
