@@ -63,7 +63,7 @@ body {
 }
 .wrapper {
   max-width: 970px;
-  padding: 0 15px;
+  /* padding: 0 15px; */
   margin: 0 auto;
 }
 .header {
