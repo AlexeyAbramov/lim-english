@@ -62,7 +62,7 @@ body {
   padding: 0;
 }
 .wrapper {
-  max-width: 1300px;
+  max-width: 970px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -495,7 +495,7 @@ body {
 
 /*1199px*/
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 768px) {
   .wrapper {
     max-width: 1200px;
     padding: 0 0;
