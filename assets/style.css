@@ -1,0 +1,731 @@
+/*variables*/
+:root {
+  --turquoise-color: #00c3bc;
+  --turquoise-color--10: #cff0ef;
+  --white-color: #fff;
+  --grey-color--00: #bebebe;
+  --grey-color--30: #f0f0f0;
+  --grey-color--50: #474a53;
+  --red-color: #f44336;
+  --orange-color: #ff940d;
+}
+/* @font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  src: url("/fonts/Roboto-Regular.woff") format(woff);
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500;
+  src: url("/fonts/Roboto-Medium.woff") format(woff);
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  src: url("/fonts/Roboto-Bold.woff") format(woff);
+} */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+ul,
+p {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style-type: none;
+}
+label {
+  cursor: pointer;
+}
+button {
+  cursor: pointer;
+}
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: var(--grey-color--50);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  max-width: 1300px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.header {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding: 0 20px;
+  background-color: var(--turquoise-color);
+}
+.payments {
+  margin-top: 47px;
+  padding-bottom: 90px;
+}
+#subscribe__input,
+#purchase__input {
+  display: none;
+}
+.form-payment__content .form-payment__purchase:checked,
+.form-payment__content .form-payment__subscribe:checked {
+  display: none;
+}
+.form-payment__content .form-payment__purchase:checked + .form-payment__label,
+.form-payment__content .form-payment__subscribe:checked + .form-payment__label {
+  border-bottom: 3px solid var(--turquoise-color);
+  color: var(--grey-color--50);
+}
+.form-payment__content .form-payment__label {
+  margin-left: 79px;
+  padding: 0 44px 12px 44px;
+  cursor: pointer;
+  color: var(--grey-color--00);
+}
+#purchase__body,
+#subscribe__body {
+  display: none;
+}
+.form-payment__content #purchase__input:checked ~ #purchase__body,
+.form-payment__content #subscribe__input:checked ~ #subscribe__body {
+  display: block;
+}
+/*purchase__body*/
+#purchase__body,
+#subscribe__body {
+  margin-top: 14px;
+  border-top: 1px solid #bebebe;
+}
+#purchase__body .purchase__heading span:nth-child(2),
+#purchase__body .list-purchase__item .list-purchase__column:nth-child(2) {
+  flex: 0 0 120px;
+  text-align: start;
+}
+#purchase__body .purchase__heading span:last-child,
+#purchase__body .list-purchase__item .list-purchase__column:last-child {
+  text-align: end;
+}
+#purchase__body span,
+#purchase__body .list-purchase__column {
+  flex: 0 0 30%;
+  align-self: center;
+}
+#purchase__body .purchase__heading,
+#purchase__body .list-purchase__item {
+  min-height: 84px;
+}
+#purchase__body .purchase__heading {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 79px;
+}
+#purchase__body .list-purchase .list-purchase__item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 79px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 7px;
+}
+#purchase__body .list-purchase .list-purchase__item.paid {
+  background-color: var(--grey-color--30);
+}
+#purchase__body
+  .list-purchase
+  .list-purchase__item.paid
+  .list-purchase__status {
+  color: var(--white-color);
+  background-color: var(--turquoise-color);
+  padding: 8px 20px;
+  border-radius: 3px;
+}
+.list-purchase .list-purchase__item ~ .list-purchase__item {
+  margin-top: 21px;
+}
+.list-purchase__name {
+  padding-right: 6px;
+}
+/*about__text*/
+#subscribe__body input[type="radion"]:checked + .list-subscribe__about {
+  display: block;
+}
+#subscribe__body .list-subscribe__about {
+  padding: 22px 43px 16px 27px;
+  min-height: 119px;
+  border: 1px solid var(--grey-color--30);
+  border-radius: 0px 0px 4px 4px;
+}
+/*success*/
+.success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 84px;
+  background-color: var(--turquoise-color--10);
+  margin-top: 30px;
+  padding: 0 15px;
+}
+/*current*/
+.current {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: bold;
+  background-color: var(--orange-color);
+  min-height: 43px;
+  margin-top: 14px;
+  color: var(--white-color);
+  padding: 0 15px;
+}
+/*subscribe__body*/
+#subscribe__body .subscribe__heading,
+#subscribe__body .subscribe-period__heading {
+  font-weight: bold;
+  line-height: 84px;
+}
+#subscribe__body .subscribe__list {
+  border-radius: 7px;
+}
+#subscribe__body .subscribe__list input[type="radio"],
+.unsub-form__body input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+#subscribe__body .list-subscribe__item .list-subscribe__row {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 79px;
+  min-height: 84px;
+  border-radius: 7px;
+  cursor: pointer;
+  background-color: var(--grey-color--30);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#subscribe__body .list-subscribe__item ~ .list-subscribe__item {
+  margin-top: 21px;
+}
+#subscribe__body .list-subscribe__item .list-subscribe__column {
+  flex: 0 1 40%;
+}
+#subscribe__body .list-subscribe__item .list-subscribe__column:first-child {
+  flex: 0 0 220px;
+}
+
+#subscribe__body .list-subscribe__item .list-subscribe__column:last-child {
+  flex: 0 0 25%;
+  text-align: end;
+}
+#subscribe__body
+  .list-subscribe__item
+  .list-subscribe__column
+  .list-subscribe__label {
+  font-weight: bold;
+}
+#subscribe__body
+  .list-subscribe__item
+  .list-subscribe__column
+  .list-subscribe__input:checked
+  ~ .check::after,
+.unsub-form__body .unsub-form__input:checked ~ .check::after {
+  position: absolute;
+  content: "";
+  width: 22px;
+  height: 22px;
+  left: calc(50% - 11px);
+  top: calc(50% - 11px);
+  border-radius: 50%;
+  background-color: var(--turquoise-color);
+}
+/*checkmark*/
+.check {
+  position: absolute;
+  top: calc(50% - 17px);
+  left: 21px;
+  height: 34px;
+  width: 34px;
+  background-color: var(--white-color);
+  border-radius: 50%;
+  border: 1px solid var(--grey-color--00);
+}
+/*percent*/
+.percent {
+  color: var(--red-color);
+  margin-right: 23px;
+}
+/*discount*/
+.discount {
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration-line: line-through;
+  color: var(--grey-color--00);
+  margin-right: 18px;
+}
+/*period*/
+.subscribe-period__form {
+  margin-top: 30px;
+}
+.subscribe-period__form .subscribe-period__list {
+  padding-bottom: 30px;
+}
+.subscribe-period__form .list-subscribe__input {
+  display: none;
+}
+/*form-button*/
+.form-payment__button {
+  display: flex;
+  justify-content: flex-end;
+}
+.form-payment__change {
+  font-size: 24px;
+  line-height: 28px;
+  padding: 24px 121px;
+}
+.button {
+  border: none;
+  font-weight: 500;
+  color: var(--white-color);
+  background-color: var(--turquoise-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.button:focus {
+  outline: none;
+}
+/*unsub*/
+.form-payment__unsub,
+.form-payment__notification,
+.form-payment__completed {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(13, 13, 13, 0.39);
+  display: none;
+}
+.form-payment__unsub.show {
+  display: block;
+}
+.unsub-form .unsub-form__content {
+  position: fixed;
+  width: 844px;
+  height: 409px;
+  padding: 0 90px;
+  top: 217px;
+  left: calc(50% - 422px);
+  background-color: var(--white-color);
+  border-radius: 12px;
+  z-index: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.unsub-form__content .unsub-form__heading {
+  margin-top: 53px;
+}
+.unsub-form__content .unsub-form__title {
+  text-align: center;
+}
+.unsub-form__body {
+  margin-top: 50px;
+}
+.unsub-form__body .unsub-form__column {
+  position: relative;
+}
+.unsub-form__body .unsub-form__column + .unsub-form__column {
+  margin-top: 35px;
+}
+.unsub-form__column .check {
+  left: 0;
+}
+.unsub-form__column .unsub-form__label {
+  margin-left: 66px;
+}
+.unsub-form__btn {
+  margin-bottom: 42px;
+}
+.unsub-form__button {
+  font-size: 18px;
+  line-height: 21px;
+  padding: 23px 65px;
+  margin-top: 50px;
+}
+/*cross*/
+.cross {
+  position: absolute;
+  right: 13.75px;
+  top: 11.76px;
+  font-size: 30px;
+  font-weight: 500;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+/*notification*/
+.form-payment__notification.notification-form.show {
+  display: block;
+}
+.notification-form__content {
+  position: fixed;
+  width: 762px;
+  height: 409px;
+  padding: 0 70px;
+  top: 217px;
+  left: 550px;
+  background-color: var(--white-color);
+  border-radius: 12px;
+  z-index: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.notification-form__content .notification-form__heading {
+  margin-top: 63px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+}
+.notification-form__content .notification-form__text {
+  padding-bottom: 35px;
+}
+.notification-form__content .notification-form__body {
+  margin-top: 38px;
+}
+.notification-form__body .notification-form__buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 22px;
+  max-width: 505px;
+  text-align: center;
+  margin: 22px auto 0 auto;
+}
+.notification-form__body .notification-form__buttons button {
+  padding: 22px 70px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+}
+.notification-form__body
+  .notification-form__buttons
+  .notification-form__cancel {
+  background-color: var(--white-color);
+  color: var(--grey-color--50);
+  border: 1px solid var(--turquoise-color);
+  border-radius: 5px;
+}
+
+/*completed-form*/
+.form-payment__completed.completed-form.show {
+  display: block;
+}
+.completed-form__content {
+  position: fixed;
+  width: 507px;
+  height: 352px;
+  padding: 0 70px;
+  top: 217px;
+  left: 700px;
+  background-color: var(--white-color);
+  border-radius: 12px;
+  z-index: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: center;
+}
+.completed-form__content .completed-form__heading {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  margin-top: 85px;
+}
+.completed-form__body > div {
+  margin-top: 38px;
+}
+.completed-form__body .completed-form__button {
+  padding: 22px 104px;
+}
+
+/*MEDIA*/
+
+/*1199px*/
+
+@media screen and (max-width: 1199px) {
+  .wrapper {
+    max-width: 1200px;
+    padding: 0 0;
+  }
+  .payments {
+    padding-bottom: 35px;
+  }
+  .form-payment__content .form-payment__label {
+    font-size: 16px;
+    line-height: 19px;
+    padding: 13px 29px;
+    margin-left: 0;
+  }
+  .form-payment__content label[for="purchase__input"] {
+    margin-left: 10px;
+  }
+  .form-payment__content label[for="subscribe__input"] {
+    margin-right: 10px;
+  }
+  #purchase__body .purchase__heading {
+    display: none;
+  }
+  #purchase__body .list-purchase {
+    margin-top: 26px;
+  }
+  #purchase__body .list-purchase .list-purchase__item {
+    border-radius: 0;
+    padding: 15px 10px 10px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  #purchase__body span,
+  #purchase__body .list-purchase__column {
+    flex: 0 1 auto;
+  }
+  #purchase__body span,
+  #purchase__body .list-purchase__column:nth-child(1) {
+    flex: 0 0 60%;
+  }
+  .list-purchase__name {
+    padding-right: 0;
+  }
+  /*succes*/
+  /*current*/
+  .success,
+  .current {
+    border-radius: 4px;
+  }
+  .success__title,
+  .current__title {
+    padding: 10px;
+  }
+  /*subscribe__form*/
+  #subscribe__body .subscribe__heading,
+  #subscribe__body .subscribe-period__heading {
+    padding: 0 14px;
+  }
+  #subscribe__body .list-subscribe__item ~ .list-subscribe__item{
+    margin-top: 10px;
+  }
+  #subscribe__body .list-subscribe__item .list-subscribe__row {
+    border-radius: 0;
+    padding: 0 15px 0 56px;
+    align-self: center;
+    flex-direction: column;
+  }
+  .check {
+    width: 25px;
+    height: 25px;
+    left: 15px;
+    top: calc(50% - 12.5px);
+  }
+  #subscribe__body
+    .list-subscribe__item
+    .list-subscribe__column
+    .list-subscribe__input:checked
+    ~ .check::after,
+  .unsub-form__body .unsub-form__input:checked ~ .check::after {
+    width: 17px;
+    height: 17px;
+    left: calc(50% - 8.5px);
+    top: calc(50% - 8.5px);
+  }
+  #subscribe__body
+    .list-subscribe__item
+    .list-subscribe__column
+    .list-subscribe__label {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  #subscribe__body
+    .list-subscribe__item
+    .list-subscribe__column
+    .list-subscribe__text {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  #subscribe__body .list-subscribe__item .list-subscribe__column:last-child {
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    flex: 0 0 100%;
+    align-items: center;
+    align-self: flex-end;
+  }
+  #subscribe__body .list-subscribe__item .list-subscribe__column {
+    flex: 0 1 65%;
+  }
+  #subscribe__body .list-subscribe__item .list-subscribe__column:first-child {
+    align-self: flex-start;
+    align-items: flex-end;
+    display: flex;
+    flex: 0 1 49%;
+  }
+  #subscribe__body .list-subscribe__item .list-subscribe__column:nth-child(2) {
+    flex: 0 1 50%;
+    align-self: end;
+    display: flex;
+    max-width: 177px;
+  }
+  #subscribe__body .list-subscribe__item .list-subscribe__row {
+    height: 84px;
+  }
+
+  #subscribe__body
+    .list-subscribe__item
+    .list-subscribe__column.column-duscount {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .discount,
+  .percent {
+    margin-right: 0;
+  }
+  .percent {
+    margin-left: 9px;
+  }
+  .subscribe-period__form {
+    margin-top: 0;
+  }
+  #subscribe__body .list-subscribe__about {
+    min-height: 56px;
+    padding: 15px;
+  }
+
+  .list-subscribe__text {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  /*button*/
+  .form-payment__button {
+    justify-content: center;
+  }
+  .button {
+    padding: 10px 77.5px;
+  }
+  .form-payment__change {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  #subscribe__body
+    .list-subscribe__item
+    .list-subscribe__column:first-child.column__null {
+    flex: 0 1 100%;
+    align-items: center;
+  }
+  /*unsubscribe-form*/
+  .unsub-form .unsub-form__content {
+    width: calc(100vw - 30px);
+    height: 293px;
+    top: calc(50% - 150px);
+    left: 15px;
+    padding: 0 10px;
+  }
+  .unsub-form__content {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .unsub-form__body {
+    margin-top: 30px;
+  }
+  .unsub-form__column .unsub-form__label {
+    margin-left: 44px;
+  }
+  .unsub-form__btn {
+    margin-bottom: 0;
+  }
+  .unsub-form__button {
+    width: 100%;
+    margin-top: 29px;
+    padding: 16px 86.5px;
+  }
+  .unsub-form__content .unsub-form__heading {
+    margin-top: 35px;
+  }
+  .unsub-form__body .unsub-form__column + .unsub-form__column {
+    margin-top: 19px;
+  }
+  /*notification-form*/
+  .notification-form__content {
+    width: calc(100vw - 30px);
+    height: 300px;
+    padding: 0 10px;
+    top: 133px;
+    left: 15px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .notification-form__content .notification-form__body {
+    margin-top: 23px;
+  }
+  .notification-form__content .notification-form__heading {
+    margin-top: 48px;
+  }
+  .notification-form__title {
+    font-size: 16px;
+    line-height: 21px;
+  }
+  .notification-form__content .notification-form__text {
+    padding-bottom: 0;
+  }
+  .notification-form__body .notification-form__buttons button {
+    padding: 10px 24px;
+  }
+  /*completed-content*/
+  .completed-form__content {
+    width: calc(100vw - 30px);
+    height: 220px;
+    top: calc(50% - 110px);
+    left: 15px;
+    font-size: 14px;
+    padding: 0 10px;
+  }
+  .completed-form__content .completed-form__heading {
+    margin-top: 48px;
+  }
+  .completed-form__title {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .completed-form__text {
+    text-align: start;
+  }
+  .completed-form__body > div {
+    margin-top: 25px;
+  }
+  .completed-form__button.button {
+    padding: 19px 0;
+    width: 100%;
+  }
+}
+
+/*420px*/
+@media screen and (max-width: 420px) {
+  .form-payment__button {
+    justify-content: center;
+  }
+}

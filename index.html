@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Lim english</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <a href="./index.html"><img src="./assets/images/logo.png" alt="header__logo"></a>
+        </header>
+        <section class="payments">
+            <form class="payments-form form-payment">
+                <div class="form-payment__content">
+                    <input class="form-payment__purchase" id="purchase__input" type="radio" name="payment" checked>
+                    <label class="form-payment__label" for="purchase__input">ПЛАТЕЖИ</label>
+                    <input class="form-payment__subscribe" id="subscribe__input" type="radio" name="payment">
+                    <label class="form-payment__label" for="subscribe__input">ПОДПИСКА</label>
+                    <div class="purchase" id="purchase__body">
+                        <div class="purchase__heading">
+                            <span class="purchase__date">Дата платежа</span>
+                            <span class="purchase__status">Статус</span>
+                            <span class="purchase__name">Название покупки</span>
+                        </div>
+                        <ul class="purchase__list list-purchase">
+                            <li class="list-purchase__item paid" data-purchase__column>
+                                <div class="list-purchase__column"><span class="list-purchase__date">09.10.2010</span>
+                                </div>
+                                <div class="list-purchase__column"><span class="list-purchase__status">оплачено</span>
+                                </div>
+                                <div class="list-purchase__column"><span class="list-purchase__name">Премиум на 1
+                                        год</span></div>
+                            </li>
+                            <li class="list-purchase__item paid" data-purchase__column>
+                                <div class="list-purchase__column"><span class="list-purchase__date">09.10.2019</span>
+                                </div>
+                                <div class="list-purchase__column"><span class="list-purchase__status">оплачено</span>
+                                </div>
+                                <div class="list-purchase__column"><span class="list-purchase__name">Премиум на 1
+                                        год</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="subscribe__body" id="subscribe__body">
+                        <div class="subscribe__form">
+                            <div class="subscribe__success success">
+                               <p class="success__title">Вы успешно сменили подписку на Бесплатный план. Переход произойдет, когда закончится ваша текущая подписка</p>
+                            </div>
+                            <div class="subscribe__current current">
+                                <p class="current__title">В настоящее время вы пользуетесь “План 1”. После “дата” он будет изменени на “План 2”</p>
+                            </div>
+                            <div class="subscribe__heading">
+                                <span class="subscribe__title">Изменить план</span>
+                            </div>
+                            <ul class="subscribe__list list-subscribe">
+                                <li class="list-subscribe__item">
+                                    <div class="list-subscribe__row">
+                                        <div class="list-subscribe__column">
+                                            <input class="list-subscribe__input" id="subscribe-0" type="radio" value="0" name="subscribe">
+                                            <span class="check"></span><label class="list-subscribe__label" for="subscribe-0">Бесплатный</label>
+                                        </div>
+                                        <div class="list-subscribe__column">
+                                            <span class="list-subscribe__text">Бесплатный тариф с базовыми функциями</span>
+                                        </div>
+                                        <div class="list-subscribe__column">
+                                            <span class="list-subscribe__price">9999 руб.</span>
+                                        </div>                                          
+                                    </div>
+                                    <div class="list-subscribe__about" hidden>
+                                        <p class="list-subscribe__text">
+                                            Текст с описанием тарифа, где рассказывается подробнее об этом тарифе и его
+                                            выгоде для оформления. Тект может быть как в одну строчку, так в две и более
+                                        </p>
+                                    </div>  
+                                </li>
+                                <li class="list-subscribe__item">
+                                    <div class="list-subscribe__row">
+                                        <div class="list-subscribe__column">
+                                            <input class="list-subscribe__input" id="subscribe-3" type="radio" value="3" name="subscribe">
+                                            <span class="check"></span><label class="list-subscribe__label" for="subscribe-3">3 месяца</label>
+                                        </div>
+                                        <div class="list-subscribe__column">
+                                            <span class="list-subscribe__text">Оплата каждый год</span>
+                                        </div>
+                                        <div class="list-subscribe__column">
+                                            <span class="list-subscribe__price">799 руб.</span>
+                                        </div>                                          
+                                    </div>
+                                    <div class="list-subscribe__about" hidden>
+                                        <p class="list-subscribe__text">
+                                            Текст с описанием тарифа, где рассказывается подробнее об этом тарифе и его
+                                            выгоде для оформления. Тект может быть как в одну строчку, так в две и более
+                                        </p>
+                                    </div>  
+                                </li>
+                                <li class="list-subscribe__item">
+                                    <div class="list-subscribe__row">
+                                        <div class="list-subscribe__column">
+                                            <input class="list-subscribe__input" id="subscribe-all" type="radio" value="12" name="subscribe">
+                                            <span class="check"></span><label class="list-subscribe__label" for="subscribe-all">1 год</label>
+                                        </div>
+                                        <div class="list-subscribe__column">
+                                            <span class="list-subscribe__text">Оплата каждый год</span>
+                                        </div>
+                                        <div class="list-subscribe__column">
+                                            <span class="list-subscribe__price">1493 руб.</span>
+                                        </div>                                          
+                                    </div>
+                                    <div class="list-subscribe__about" hidden>
+                                        <p class="list-subscribe__text">
+                                            Текст с описанием тарифа, где рассказывается подробнее об этом тарифе и его
+                                            выгоде для оформления. Тект может быть как в одну строчку, так в две и более
+                                        </p>
+                                    </div>  
+                                </li>
+                                <li class="list-subscribe__item">
+                                    <div class="list-subscribe__row">
+                                        <div class="list-subscribe__column">
+                                            <input class="list-subscribe__input" id="subscribe-all" type="radio" value="99" name="subscribe">
+                                            <span class="check"></span><label class="list-subscribe__label" for="subscribe-all">Навсегда</label>
+                                        </div>
+                                        <div class="list-subscribe__column">
+                                            <span class="list-subscribe__text">Оплата один раз</span>
+                                        </div>
+                                        <div class="list-subscribe__column column-duscount">
+                                            <div class="list-subscribe__sale">
+                                                <span class="list-subscribe__discount discount">5840 руб.</span>
+                                                <span class="list-subscribe__percent percent">-30%</span>
+                                            </div>
+                                            <span class="list-subscribe__price">4493 руб.</span>
+                                        </div>                                          
+                                    </div>
+                                    <div class="list-subscribe__about" hidden>
+                                        <p class="list-subscribe__text">
+                                            Текст с описанием тарифа, где рассказывается подробнее об этом тарифе и его
+                                            выгоде для оформления. Тект может быть как в одну строчку, так в две и более
+                                        </p>
+                                    </div>  
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="subscribe-period__form">
+                            <div class="subscribe-period__heading">
+                                <span class="subscribe-period__title">Срок подписки</span>
+                            </div>
+                            <ul class="subscribe-period__list list-subscribe">
+                                <li class="list-subscribe__item">
+                                    <div class="list-subscribe__row">
+                                        <div class="list-subscribe__column column__null"><input class="list-subscribe__input" id="subscribe-month" type="radio" value="30" name="subscribe"><span class="check"></span><label class="list-subscribe__label"for="subscribe-month">Оплатить месячный</label></div>
+                                        <div class="list-subscribe__column"><span class="list-subscribe__text"></span></div>
+                                        <div class="list-subscribe__column"><span class="list-subscribe__price"></span></div>
+                                    </div>
+                                        <div class="list-subscribe__about" hidden>
+                                            <p class="list-subscribe__text">
+                                                Текст с описанием тарифа, где рассказывается подробнее об этом тарифе и его
+                                                выгоде для оформления. Тект может быть как в одну строчку, так в две и более
+                                            </p>
+                                        </div>
+                                </li>
+                                <li class="list-subscribe__item">
+                                    <div class="list-subscribe__row">
+                                        <div class="list-subscribe__column"><input class="list-subscribe__input"
+                                                id="subscribe-year" type="radio" value="365" name="subscribe"><span
+                                                class="check"></span><label class="list-subscribe__label"
+                                                for="subscribe-year">Оплатить годовой</label></div>
+                                        <div class="list-subscribe__column"><span class="list-subscribe__text">Выгода
+                                                25%</span></div>
+                                        <div class="list-subscribe__column"><span class="list-subscribe__price">9999
+                                               руб. <br> в
+                                                месяц</span></div>
+                                    </div>
+                                        <div class="list-subscribe__about" hidden>
+                                            <p class="list-subscribe__text">
+                                                Текст с описанием тарифа, где рассказывается подробнее об этом тарифе и его
+                                                выгоде для оформления. Тект может быть как в одну строчку, так в две и более
+                                            </p>
+                                        </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="form-payment__button">
+                            <button class="form-payment__change button"> ИЗМЕНИТЬ </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="form-payment__unsub unsub-form" id="unsubscribe-form">
+                <div class="unsub-form__content">
+                    <span class="cross">+</span>
+                    <div class="unsub-form__heading">
+                        <span class="unsub-form__title">Пожалуйста, расскажите нам, почему вы решили сменить тарифный план</span>
+                    </div>
+                    <form  class="unsub-form__body">
+                        <ul class="unsub-form__list">
+                            <li class="unsub-form__column"><input class="unsub-form__input" type="radio" name="unsub" id="un1" value="1" checked><span class="check"></span> <label class="unsub-form__label" for="un1">Вариант 1</label></li>
+                            <li class="unsub-form__column"><input class="unsub-form__input"  type="radio" name="unsub" id="un2"  value="2"><span class="check"></span> <label class="unsub-form__label" for="un2">Вариант 2</label></li>
+                            <li class="unsub-form__column"><input class="unsub-form__input"  type="radio" name="unsub" id="un3"  value="3"><span class="check"></span><label  class="unsub-form__label" for="un3">Вариант 3</label></li>
+                            <li class="unsub-form__btn"><input type="submit" class="unsub-form__button button" value="Отписаться"></div>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+            <div class="form-payment__notification notification-form" id="notification-form">
+                <div class="notification-form__content">
+                    <span class="cross">+</span>
+                    <div class="notification-form__heading">
+                        <span class="notification-form__title">Уведомление</span>
+                    </div>
+                    <div class="notification-form__body">
+                        <div class="notification-form__text">
+                            <p>
+                                Текст уведомления, которое информирует о ньансах перехода на другой тариф.
+                                Текст уведомления, которое информирует о ньансах перехода на другой тариф.
+                                 Текст уведомления, которое информирует о ньансах перехода на другой тариф.
+                            </p>
+                        </div>
+                        <div class="notification-form__buttons"> 
+                            <button class="notification-form__send button">Отправить</button>
+                            <button class="notification-form__cancel button">Закрыть</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-payment__completed completed-form" id="completed-form">
+                <div class="completed-form__content">
+                    <span class="cross">+</span>
+                    <div class="completed-form__heading">
+                        <span class="completed-form__title">Уведомление</span>
+                    </div>
+                    <div class="completed-form__body">
+                        <div class="completed-form__text">
+                            <p>
+                                Ваш тарифный план изменен
+                            </p>
+                        </div>
+                        <div class="completed-form__ok">
+                            <button class="completed-form__button button">
+                                    Ок
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>
