@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/style.css">
     <title>Lim english</title>
 </head>
@@ -19,14 +18,21 @@
             <form class="payments-form form-payment">
                 <div class="form-payment__content">
                     <input class="form-payment__purchase" id="purchase__input" type="radio" name="payment" checked>
-                    <label class="form-payment__label" for="purchase__input">ПЛАТЕЖИ</label>
+                    <label class="form-payment__label" for="purchase__input"><h4 class="purchase__text">ПЛАТЕЖИ</h4></label>
                     <input class="form-payment__subscribe" id="subscribe__input" type="radio" name="payment">
-                    <label class="form-payment__label" for="subscribe__input">ПОДПИСКА</label>
+                    <label class="form-payment__label" for="subscribe__input"><h4 class="subscribe__text">ПОДПИСКА</h4></label>
+                    <div class="empty" hidden>
+                        <div class="empty__body" id="empty__body">
+                            <h4 class="empty__text">
+                                Покупки отсутсвуют
+                            </h4>
+                        </div>
+                    </div>
                     <div class="purchase" id="purchase__body">
                         <div class="purchase__heading">
-                            <span class="purchase__date">Дата платежа</span>
-                            <span class="purchase__status">Статус</span>
-                            <span class="purchase__name">Название покупки</span>
+                            <h4 class="purchase__date">Дата платежа</h4>
+                            <h4 class="purchase__status">Статус</h4>
+                            <h4 class="purchase__name">Название покупки</h4>
                         </div>
                         <ul class="purchase__list list-purchase">
                             <li class="list-purchase__item paid" data-purchase__column>
@@ -210,7 +216,7 @@
                 <div class="notification-form__content">
                     <span class="cross">+</span>
                     <div class="notification-form__heading">
-                        <span class="notification-form__title">Уведомление</span>
+                        <h4 class="notification-form__title">Уведомление</h4>
                     </div>
                     <div class="notification-form__body">
                         <div class="notification-form__text">
@@ -231,7 +237,7 @@
                 <div class="completed-form__content">
                     <span class="cross">+</span>
                     <div class="completed-form__heading">
-                        <span class="completed-form__title">Уведомление</span>
+                        <h4 class="completed-form__title">Уведомление</h4>
                     </div>
                     <div class="completed-form__body">
                         <div class="completed-form__text">
