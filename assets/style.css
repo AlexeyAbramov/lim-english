@@ -351,7 +351,7 @@ body {
 .unsub-form .unsub-form__content {
   position: fixed;
   width: 844px;
-  height: 409px;
+  min-height: 409px;
   padding: 0 90px;
   top: calc(50% - 204px);
   left: calc(50% - 422px);
@@ -410,7 +410,7 @@ body {
 .notification-form__content {
   position: fixed;
   width: 762px;
-  height: 409px;
+  min-height: 409px;
   padding: 0 70px;
   top: calc(50% - 204px);
   left: calc(50% - 381px);
@@ -698,9 +698,9 @@ body {
   /*notification-form*/
   .notification-form__content {
     width: calc(100vw - 30px);
-    height: 300px;
+    min-height: 300px;
     padding: 0 10px;
-    top: 133px;
+    top: calc(50% - 150px);
     left: 15px;
     font-size: 14px;
     line-height: 16px;
