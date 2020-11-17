@@ -609,7 +609,7 @@ body {
   }
   #subscribe__body .list-subscribe__item .list-subscribe__column:nth-child(2) {
     flex: 0 1 50%;
-    align-self: end;
+    align-self: baseline;
     display: flex;
     max-width: 177px;
   }
